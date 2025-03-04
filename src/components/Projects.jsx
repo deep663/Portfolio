@@ -74,8 +74,7 @@ let projects = [
 ];
 
 const Projects = () => {
-  const centerIndex = Math.floor(projects.length / 2);
-  const [selectedId, setSelectedId] = useState(projects[centerIndex].id);
+  const [selectedId, setSelectedId] = useState(projects[0].id);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
 
