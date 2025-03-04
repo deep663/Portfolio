@@ -37,7 +37,7 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section id="certificate" className="relative h-fit w-full bg-black flex flex-col items-center justify-center">
+    <section id="certificate" className="hidden relative h-fit w-full bg-black md:flex flex-col items-center justify-center">
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
