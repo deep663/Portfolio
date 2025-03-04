@@ -2,10 +2,8 @@ import { TypeAnimation as Typing } from "react-type-animation";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion"; 
-import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-  const { ref, inView } = useInView({ threshold: 0.5 });
 
   const icons = [
     {
@@ -32,9 +30,8 @@ const Hero = () => {
       className="flex flex-col md:flex-row items-center justify-center min-h-screen py-10 px-6 overflow-hidden"
     >
       <motion.div
-        ref={ref}
         initial={{ opacity: 0, x: -100 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+        whileInView={{ opacity:1, x:0}}
         exit={{ opacity: 0, x: -100 }}
         transition={{ duration: 0.5, delay: 0 }}
         className="md:w-1/2 flex flex-col justify-center items-center"
@@ -54,9 +51,8 @@ const Hero = () => {
       </motion.div>
       <div className="md:w-1/2 text-center md:text-left mt-6 md:mt-0 ">
         <motion.h1
-          ref={ref}
           initial={{ opacity: 0, x: 100 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          whileInView={{opacity:1, x:0}}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5, delay: 0 }}
           className="text-4xl sm:text-7xl font-bold mb-4"
@@ -64,9 +60,8 @@ const Hero = () => {
           Hi, It's <span className="text-red-500">DEEP</span>
         </motion.h1>
         <motion.h3
-          ref={ref}
           initial={{ opacity: 0, x: 100 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          whileInView={{opacity:1, x:0}}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-2xl sm:text-3xl font-semibold mb-4"
@@ -77,11 +72,11 @@ const Hero = () => {
               sequence={[
                 "Software Engineer",
                 1000,
-                "Machine Learning Developer",
+                "ML Developer",
                 1000,
                 "AI Enthusiast",
                 1000,
-                "MERN Stack Developer",
+                "MERN Developer",
                 1000,
                 "Cybersecurity Enthusiast",
                 1000,
@@ -93,9 +88,8 @@ const Hero = () => {
           </span>
         </motion.h3>
         <motion.p
-          ref={ref}
           initial={{ opacity: 0, x: 100 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          whileInView={{opacity:1, x:0}}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-sm sm:text-lg mb-6"
@@ -109,13 +103,8 @@ const Hero = () => {
         <div className="flex justify-center md:justify-start space-x-4 mb-6 sm:mb-6">
           {icons.map((icon, index) => (
             <motion.a
-              ref={ref}
               initial={{ rotateX: 90, opacity: 0 }} 
-              animate={
-                inView
-                  ? { rotateX: 0, opacity: 1 }
-                  : { rotateX: 90, opacity: 0 }
-              } 
+              whileInView={{rotateX: 0, opacity:1 }}
               transition={{
                 duration: 0.5,
                 delay: 0.5,

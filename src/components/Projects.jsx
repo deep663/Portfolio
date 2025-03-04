@@ -7,52 +7,69 @@ let projects = [
   {
     id: 1,
     name: "Portfolio Website",
-    image: "/projects/bg_image_1.jpg",
+    image: "/projects/portfolio.png",
     description:
-      "A cyberpunk-themed portfolio with stunning animations. Built with React, Framer Motion, and Tailwind CSS. Dolore non quis magna commodo reprehenderit. Cupidatat sint magna eiusmod est est consectetur. Labore nulla in non cupidatat commodo voluptate ex nostrud. Quis aliqua sint ut aute ea.̥Minim est sint adipisicing duis est qui sunt commodo occaecat laborum id. ̥Anim aliquip culpa nostrud Lorem pariatur. Et cupidatat commodo nostrud ex nulla occaecat pariatur velit sit ad consectetur aliqua cupidatat. Lorem non sunt aliqua irure mollit minim sunt nisi dolor labore.",
-    tech: ["React", "Framer Motion", "Tailwind CSS"],
-    github: "#",
-    live: "",
+      "A Red-black-themed portfolio with stunning animations. Built with React, Framer Motion, Emailjs, Swiper and Tailwind CSS. Includes a hero section, projects section, certifications section, and contact section.",
+    tech: ["React", "Framer Motion", "Tailwind CSS", "Swiper JS", "Emailjs"],
+    github: "https://github.com/deep663/Portfolio",
+    live: "/",
   },
   {
     id: 2,
-    name: "Chatbot UI",
-    image: "/projects/bg_image_2.jpg",
+    name: "Handcrafted Gifts Website",
+    image: "/projects/craft_web.png",
     description:
-      "A minimalist chatbot interface using React and Tailwind.Exercitation culpa cupidatat dolore dolor ipsum pariatur anim Lorem eu pariatur excepteur laborum. In nostrud ea culpa dolor tempor ad sint. Ullamco nisi esse do velit enim eiusmod eiusmod.Qui anim tempor occaecat veniam velit velit ut reprehenderit officia est consectetur culpa. Ullamco excepteur sunt cillum fugiat culpa amet labore pariatur in voluptate. Qui commodo aliquip in esse consectetur est dolore do sit in velit.",
+      "A minimalist Handcrafted Gifts Website! This is portfolio website for handcrafted gifts where users can explore and purchase beautifully crafted handmade gifts",
     tech: ["React", "Tailwind CSS", "Node.js"],
-    github: "#",
-    live: "",
+    github: "https://github.com/deep663/Craft-wesite",
+    live: "https://deam-craft.vercel.app/",
   },
   {
     id: 3,
-    name: "Expense Tracker",
-    image: "/projects/bg_image_3.jpg",
+    name: "Binyte - Portfolio website",
+    image: "/projects/binyte_web.png",
     description:
-      "A React Native app to track daily expenses efficiently.Exercitation officia ex eiusmod ex mollit. Duis et culpa ipsum aute consectetur sunt nostrud Lorem sunt proident veniam esse. Duis mollit esse enim quis irure voluptate nulla enim occaecat voluptate irure magna veniam. Quis aliqua occaecat sit exercitation dolor fugiat aliquip mollit ea. Voluptate quis excepteur pariatur proident. Eiusmod pariatur laboris officia aute nulla labore culpa est pariatur exercitation.In est ut mollit elit sit. Dolore aliqua ut reprehenderit quis ullamco commodo dolor. Est officia sunt occaecat quis nulla pariatur sunt non et ipsum. Proident tempor exercitation est aliquip aliquip.",
-    tech: ["React Native", "Redux", "Firebase"],
-    github: "#",
-    live: "",
+      "A portfolio wesite fro Binyte. Binyte is a full-service social media agency based in India.",
+    tech: ["React", "Vite", "Redux", "Tailwind CSS"],
+    github: "https://github.com/deep663/Website",
+    live: "https://website2-dusky.vercel.app/",
   },
   {
     id: 4,
-    name: "Task Manager",
-    image: "/projects/bg_image_4.jpg",
+    name: "Indoor Scene Understanding",
+    image: "/projects/final_project.png",
     description:
-      "A comprehensive task management application that helps users organize their tasks efficiently. Built with React, Redux, and Tailwind CSS. This app allows users to create, update, and delete tasks, set deadlines, and categorize tasks for better organization. The user-friendly interface ensures a smooth experience while managing daily responsibilities. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    tech: ["React", "Redux", "Tailwind CSS"],
-    github: "#",
+      "Developed a method to analyses the spatial arrangement of objects within indoor scenes, leveraging the combined information from cameras and 2D LiDAR sensors.",
+    tech: ["Python", "OpenCV", "YOLOv8", "PyTorch" ],
+    github: "https://github.com/deep663/Indoor-Scene-Understanding-using-Camera-2D-Lidar",
     live: "",
   },
   {
     id: 5,
-    name: "E-commerce Dashboard",
-    image: "/projects/bg_image_1.jpg",
+    name: "Job Finder",
+    image: "/projects/job_finder.png",
     description:
-      "An interactive e-commerce dashboard for managing products, orders, and customers. Built with React, Node.js, and MongoDB. This dashboard provides real-time analytics and insights into sales performance, inventory levels, and customer behavior. Users can easily add, edit, and delete products, as well as manage orders and customer information. A responsive design ensures accessibility across devices. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "#",
+      "This Python project is designed to scrape job listings from popular job portals, including Naukri, Foundit, Shine, Indeed, and LinkedIn. Users can input the desired job title and location, and the script will extract detailed job information.",
+    tech: ["Python", "Selenium", "BeautifulSoup"],
+    github: "https://github.com/deep663/Job_finder",
     live: "",
+  },
+  {
+    id: 6,
+    name: "Exercise Challenge Web App",
+    image: "/projects/exercise_app.png",
+    description:
+      "A full-stack MERN (MongoDB, Express, React, Node.js) web application for tracking daily exercises for a 60 days challenge. Users can complete daily exercises, earn points, and stay motivated.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Express.js",
+      "Redux",
+    ],
+    github: "https://github.com/deep663/Exercise-app",
+    live: "https://exercise-app-tau.vercel.app/",
   },
 ];
 
@@ -101,7 +118,7 @@ const Projects = () => {
         <motion.div
           id="project-list"
           initial={{ opacity: 0, x: -100, rotateX: 90 }}
-          whileInView={{ opacity: 1, x: 0, rotateX:0 }}
+          whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="absolute top-1/2 -translate-y-1/2 flex flex-col gap-2 w-full"
         >
@@ -110,7 +127,7 @@ const Projects = () => {
             return (
               <motion.div
                 key={project.id}
-                className={`project-item cursor-pointer p-3 text-center rounded-lg w-full transition-all ${
+                className={`project-item cursor-pointer p-3 text-center rounded-lg w-full overflow-auto transition-all ${
                   isSelected ? "text-xl font-bold" : "text-base"
                 }`}
                 initial={{
@@ -125,7 +142,11 @@ const Projects = () => {
                   scale: isSelected ? 1.2 : 0.9,
                   opacity: isSelected ? 1 : 0.5,
                 }}
-                transition={{ duration: 0.5, ease: "easeIn", delay: 0.2 * project.id }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeIn",
+                  delay: 0.2 * project.id,
+                }}
                 onClick={() => handleSelect(project.id)}
               >
                 {project.name}
@@ -138,10 +159,11 @@ const Projects = () => {
       {/* Project Details */}
       <div className="w-full md:w-3/4 p-2 md:p-6">
         <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="text-3xl text-center md:text-left font-bold mb-4">
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="text-3xl text-center md:text-left font-bold mb-4"
+        >
           Projects
         </motion.h1>
         {projects.map(
@@ -152,46 +174,50 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="glass pb-4"
+                className="glass"
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-64 object-cover rounded-t-lg mb-4"
+                  className="w-full max-h-[70vh] object-center object-cover rounded-lg"
                 />
-                <h2 className="text-2xl text-white font-bold mb-2 ml-4">
-                  {project.name}
-                </h2>
-                <p className="text-md text-wrap h-30 md:h-fit mb-4 text-gray-200 ml-4 overflow-auto">
-                  {project.description}
-                </p>
-                <div className="flex gap-2 mb-4 ml-4">
-                  {project.tech.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="bg-transparent text-white px-3 py-1 border-2 border-white rounded-full text-sm hover:bg-white font-semibold hover:text-black hover:shadow-[0_0_13px_#ffffff] transition duration-300"
+                <div className="md:absolute bottom-0 p-4 w-full md:bg-red-900/90 md:rounded-b-lg">
+                  <h2 className="text-2xl text-white font-bold mb-2">
+                    {project.name}
+                  </h2>
+                  <p className="text-md text-wrap h-30 md:h-fit mb-4 text-gray-200 overflow-auto">
+                    {project.description}
+                  </p>
+                  <div className="flex gap-2 mb-4 overflow-auto">
+                    {project.tech.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="bg-transparent text-white px-3 py-auto md:py-1 border-2 border-white rounded-full text-sm hover:bg-white hover:text-black hover:shadow-[0_0_13px_#ffffff] transition duration-300 "
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-black px-4 py-2 rounded-lg hover:shadow-[0_0_13px_#ffffff] transition duration-300"
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4 ml-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-black px-4 py-2 rounded-lg hover:shadow-[0_0_13px_#ffffff] transition duration-300"
-                  >
-                    <FaGithub /> GitHub
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${(project.live === "") ? "hidden" : "flex"} items-center gap-2 bg-green-600 px-4 py-2 rounded-lg hover:shadow-[0_0_10px_#ffffff] transition duration-300`}
-                  >
-                    <FaExternalLinkAlt /> View
-                  </a>
+                      <FaGithub /> GitHub
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${
+                        project.live === "" ? "hidden" : "flex"
+                      } items-center gap-2 bg-green-600 px-4 py-2 rounded-lg hover:shadow-[0_0_10px_#ffffff] transition duration-300`}
+                    >
+                      <FaExternalLinkAlt /> View
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             )

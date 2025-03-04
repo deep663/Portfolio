@@ -11,40 +11,7 @@ import "../styles.css";
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
-const certifications = [
-  {
-    title: "C++ programming - Udemy",
-    date: "Aug 2023",
-    image: "/certificates/c++_cer.jpg",
-  },
-  {
-    title: "Crash Course on Python - Google",
-    date: "Aug 2023",
-    image: "/certificates/pyt_cer.png",
-  },
-  {
-    title: "Introduction to Cybersecurity Tools",
-    date: "Mar 2023",
-    image: "/certificates/cyb_cer.png",
-  },
-  {
-    title: "Ethical Hacking Basics",
-    date: "Sept 2022",
-    image: "/certificates/eth_cer.png",
-  },
-  {
-    title: "Web Development Training (Internshala)",
-    date: "Jun 2022",
-    image: "/certificates/web_dev_cer.png",
-  },
-  {
-    title: "Cybersecurity Roles, Processes & Operating System Security (Google)",
-    date: "Apr 2023",
-    image: "/certificates/cyb_2_cer.png",
-  },
-];
-
-export default function Slider() {
+export default function Slider({data}) {
   return (
     <>
       <Swiper
@@ -65,7 +32,7 @@ export default function Slider() {
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
-        {certifications.map((cert, index) => (
+        {data.map((cert, index) => (
           <SwiperSlide
             key={index}
             className="flex flex-col items-center overflow-hidden rounded-lg"
